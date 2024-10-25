@@ -1,0 +1,25 @@
+<view class="container">
+  <textarea 
+    class="url-input" 
+    placeholder="请输入视频URL" 
+    bindinput="onInputChange"
+    auto-height
+    maxlength="2000"
+  />
+  <text class="char-count">{{videoUrl.length}}/2000</text>
+  <button class="create-btn" bindtap="onCreateClick" disabled="{{isLoading}}">
+    {{isLoading ? '处理中...' : '二次创作'}}
+  </button>
+  <view class="result-container">
+    <view class="result-header">
+      <text class="result-title">创作结果:</text>
+      <text class="copy-text" bindtap="copyResult" wx:if="{{result}}">复制结果</text>
+    </view>
+    <scroll-view scroll-y="true" class="result-scroll">
+      <text class="result-content">{{result}}</text>
+    </scroll-view>
+  </view>
+  <view class="debug-url" wx:if="{{debugUrl}}">
+    <text>Debug URL: {{debugUrl}}</text>
+  </view>
+</view>

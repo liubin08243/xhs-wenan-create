@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/videoCreation/videoCreation"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "视频二次创作",
+    "navigationBarTextStyle": "black"
+  }
+}
