@@ -6,10 +6,7 @@
 3、微信开发者工具：cursor创建完的微信小程序应用，直接在开发者工具调试，超级丝滑。🎯AI编程太神奇了，AI时代人人至少要成为"赤脚程序员"，你也赶紧去试试吧
 
 ### 本项目代码下载后的准备：
-1、安装coze，注册账号，创建工作流，创建智能体。
-2、安装cursor，注册账号，创建微信小程序应用。
-3、下载本项目代码，在微信开发者工具中导入本项目代码。
-4、修改videoCreation.js文件，替换自己的Authorization。
+1、修改videoCreation.js文件，替换自己的Authorization。
 
  wx.request({
       url: 'https://api.coze.cn/v1/workflow/run',
@@ -32,4 +29,4 @@
       complete: this.handleComplete.bind(this)
     });
     
-5、在微信开发者工具中，进项调试。
+2、在微信开发者工具中，进项调试。
