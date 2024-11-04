@@ -1,14 +1,30 @@
-### 本项目主要功能是通过输入如小红书，抖音平台视频的URL，一键提取原视频文案，然后根据原视频文案完成二次创作生成新的视频文案。
+# 视频文案一键生成工具
 
-### 本项目运行需要的工具：
-1、coze：字节扣子平台，可以在平台上创建工作流，发布智能体。
-2、cursor：一款AI编辑器，默认集成Claude-3.5-sonnet模型，最近编程体验下来越来越觉得强大。
-3、微信开发者工具：cursor创建完的微信小程序应用，直接在开发者工具调试，超级丝滑。🎯AI编程太神奇了，AI时代人人至少要成为"赤脚程序员"，你也赶紧去试试吧
+## 项目简介
+本项目可以通过输入小红书、抖音等平台的视频 URL，一键提取原视频文案，并利用 AI 进行二次创作，生成全新的视频文案。
 
-### 本项目代码下载后的准备：
-1、修改videoCreation.js文件，替换自己的Authorization。
+## 必需工具
+1. **Coze (字节扣子平台)**
+   - 用于创建工作流
+   - 发布智能体
 
- wx.request({
+2. **Cursor**
+   - AI 驱动的代码编辑器
+   - 默认集成 Claude-3.5-sonnet 模型
+   - 强大的 AI 编程体验
+
+3. **微信开发者工具**
+   - 用于调试微信小程序
+   - 与 Cursor 完美配合
+   - 提供流畅的开发体验
+
+## 项目配置步骤
+
+### 1. 配置 Authorization
+在 `videoCreation.js` 文件中，替换为你自己的 Authorization：
+
+```javascript
+wx.request({
       url: 'https://api.coze.cn/v1/workflow/run',
       method: 'POST',
       header: {
@@ -28,5 +44,5 @@
       fail: this.handleFail.bind(this),
       complete: this.handleComplete.bind(this)
     });
-    
+```   
 2、在微信开发者工具中，进项调试。
